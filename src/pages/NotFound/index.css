@@ -1,0 +1,45 @@
+@import './reset.css';
+
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid black;
+  margin: 0 auto;
+  font-size: 24px;
+  width: 330px;
+}
+
+.form {
+  padding: 0 auto;
+}
+
+.input_group {
+  display: flex;
+  padding: 5px;
+}
+
+
+
+.input_title {
+  padding-right: 20px;
+}
+
+#password {
+  margin-left: 72px;
+}
+
+.btn_container {
+  position: relative;
+}
+
+.btn {
+  font-size: 24px;
+  border: 1px solid black;
+  border-radius: 2px;
+  position: absolute;
+  left: 40%;
+  margin-top: 10px ;
+}
