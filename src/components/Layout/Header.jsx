@@ -1,7 +1,30 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
+// import { useState } from "react";
+import { useUserStore } from "@/store/user";
+
+const languageList = {
+  zh: "zh_TW",
+  en: "en_US",
+};
 
 const Header = () => {
+  const { language, setLanguage } = useUserStore();
+  console.log(language);
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  //const [language, setLanguage] = useState(languageList.zh);
+
+  //翻譯
+
+  const changeLanguage = () => {
+    const newLanguage =
+      language === languageList.zh ? languageList.en : languageList.zh;
+    setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
+  };
+
   return (
     <header className="header">
       <img
@@ -12,36 +35,33 @@ const Header = () => {
       <ul id="menu" className="nav">
         <li className="nav_item">
           <Link to="/" className="nav_link">
-            首頁
+            {t("home")}
           </Link>
         </li>
         <li className="nav_item">
           <Link to="about" className="nav_link">
-            關於我
+            {t("about")}
           </Link>
         </li>
         <li className="nav_item">
           <Link to="blogs" className="nav_link">
-            所有文章
+            {t("all")}
           </Link>
         </li>
       </ul>
       <ul className="icon__container flex">
-        <Link to="eddit-post" className="icon_link">
-          <i class="fa-solid fa-pen"></i>
-          發表文章
+        <Link to="add-post" className="icon_link">
+          <i className="fa-solid fa-pen"></i>
+          {t("eddit")}
         </Link>
-        <li
-          onClick={() => navigate("/add-post")}
-          className="icon_link cursor-pointer"
-        >
-          <i class="fa-solid fa-earth-asia"></i> EN
+        <li onClick={changeLanguage} className="icon_link cursor-pointer">
+          <i className="fa-solid fa-earth-asia"></i> EN
         </li>
         <li href="" className="icon_link">
-          <i class="fa-solid fa-moon"></i>
+          <i className="fa-solid fa-moon"></i>
         </li>
         <li href="" className="icon_link">
-          <i class="fa-solid fa-arrow-right-to-bracket"></i> 登入
+          <i className="fa-solid fa-arrow-right-to-bracket"></i> {t("login")}
         </li>
       </ul>
     </header>

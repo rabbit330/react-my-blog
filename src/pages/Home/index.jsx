@@ -1,8 +1,30 @@
-import Layout from "@/components/Layout";
+//import { Link, useNavigate } from "react-router-dom";
+//import { useTranslation } from "react-i18next";
+//import i18n from "@/i18n";
+//import { useState } from "react";
+
+/*const languageList = {
+  zh: "zh_TW",
+  en: "en_US",
+}; */
+
+// 全局狀態 localStorage
 
 const Home = () => {
+  //const navigate = useNavigate();
+  //const { t } = useTranslation();
+  //const [language, setLanguage] = useState(languageList.zh);
+
+  /*
+  const changeLanguage = () => {
+    const newLanguage =
+      language === languageList.zh ? languageList.en : languageList.zh;
+    setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
+  };
+  */
   return (
-    <Layout>
+    <>
       <section id="banner">
         <div className="banner_container">
           <p className="banner_stittle">Travel Blog</p>
@@ -23,7 +45,7 @@ const Home = () => {
                     src="https://i0.wp.com/huitinchou.tw/wp-content/uploads/2020/09/20200910082303_86.jpg"
                     alt=""
                   />
-                  <h1 className="post-link">Travel</h1>
+                  <h1 className="post-link">{t("travel")}</h1>
                 </div>
               </div>
               <div className="col-4">
@@ -33,7 +55,7 @@ const Home = () => {
                     src="https://images.pexels.com/photos/1064136/pexels-photo-1064136.jpeg"
                     alt=""
                   />
-                  <h1 className="post-link">Eat</h1>
+                  <h1 className="post-link">{t("eat")}</h1>
                 </div>
               </div>
               <div className="col-4">
@@ -43,7 +65,7 @@ const Home = () => {
                     src="https://scontent.frmq3-1.fna.fbcdn.net/v/t39.30808-6/209924931_4304154672975922_8583083328128074987_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oGMRl8fLZysQ7kNvgHG8peJ&_nc_zt=23&_nc_ht=scontent.frmq3-1.fna&_nc_gid=AJLklsYxZI3H0HdZbC6f0WB&oh=00_AYBovkIzoZ5UxLJSO8F6g2lzJS-Q4fTK4P4IMEqbTpyn6w&oe=672A5C92"
                     alt=""
                   />
-                  <h1 className="post-link">Relax</h1>
+                  <h1 className="post-link">{t("relax")}</h1>
                 </div>
               </div>
               <div className="col-4">
@@ -53,7 +75,7 @@ const Home = () => {
                     src="https://images.pexels.com/photos/4790579/pexels-photo-4790579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     alt=""
                   />
-                  <h1 className="post-link">Spiritual</h1>
+                  <h1 className="post-link">{t("spiritual")}</h1>
                 </div>
               </div>
               <div className="col-4">
@@ -63,7 +85,7 @@ const Home = () => {
                     src="https://life-tree.org.tw/wp-content/uploads/2021/12/biblestudy-2.jpg"
                     alt=""
                   />
-                  <h1 className="post-link">Essay</h1>
+                  <h1 className="post-link">{t("essay")}</h1>
                 </div>
               </div>
               <div className="col-4">
@@ -73,7 +95,7 @@ const Home = () => {
                     src="https://cdn.ftvnews.com.tw/manasystem/FileData/News/70c6daa0-8474-459c-b3b9-a85f8775c4be.jpg"
                     alt=""
                   />
-                  <h1 className="post-link">work</h1>
+                  <h1 className="post-link">{t("work")}</h1>
                 </div>
               </div>
             </div>
@@ -86,25 +108,25 @@ const Home = () => {
           <div className="row">
             <div className="col-2">
               <div className="aside border border-solid border-gray-400 shadow-primary w-40 h-[280px]">
-                <a>文章分類</a>
+                <a>{t("catalog")}</a>
                 <ul>
                   <li className="border-b border-solid border-gray-400">
-                    旅遊Travel
+                    {t("travel")}
                   </li>
                   <li className="border-b border-solid border-gray-400">
-                    美食Eat
+                    {t("eat")}
                   </li>
                   <li className="border-b border-solid border-gray-400">
-                    放鬆Relax
+                    {t("relax")}
                   </li>
                   <li className="border-b border-solid border-gray-400">
-                    心靈Spiritual
+                    {t("spiritual")}
                   </li>
                   <li className="border-b border-solid border-gray-400">
-                    札記Essay
+                    {t("essay")}
                   </li>
                   <li className="border-b border-solid border-gray-400">
-                    工作work
+                    {t("work")}
                   </li>
                 </ul>
               </div>
@@ -138,18 +160,18 @@ const Home = () => {
                   <div className="text_icon">
                     <div className="view">
                       <a href="" className="text_link">
-                        <i class="fa-regular fa-eye"></i>
+                        <i className="fa-regular fa-eye"></i>
                       </a>
                       <span className="viel">0</span>
                       <a href="" className="text_link">
-                        <i class="fa-regular fa-comment"></i>
+                        <i className="fa-regular fa-comment"></i>
                       </a>
                       <span className="viel">0</span>
                     </div>
                     <div className="heart">
                       <span className="viel">10</span>
                       <a href="" className="text_link">
-                        <i class="fa-solid fa-heart"></i>
+                        <i className="fa-solid fa-heart"></i>
                       </a>
                     </div>
                   </div>
@@ -163,26 +185,26 @@ const Home = () => {
         <ul id="social_container" className="nav">
           <li className="nav_item">
             <a href="#" className="nav_link">
-              <i class="fa-brands fa-facebook-f"></i> facebook
+              <i className="fa-brands fa-facebook-f"></i> facebook
             </a>
             <a href="#" className="nav_link">
-              <i class="fa-brands fa-instagram"></i> instagram
+              <i className="fa-brands fa-instagram"></i> instagram
             </a>
             <a href="#" className="nav_link">
               <i class="fa-brands fa-x-twitter"></i> twitter
             </a>
             <a href="#" className="nav_link">
-              <i class="fa-brands fa-threads"></i> thread
+              <i className="fa-brands fa-threads"></i> thread
             </a>
           </li>
         </ul>
-        <div classNameName="photo_line">
+        <div className="photo_line">
           <div className="selection">
             <div className="selection_link"></div>
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

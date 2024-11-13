@@ -1,9 +1,9 @@
 const NotFound = () => {
   return (
-    <div class="box">
+    <div className="box">
       <form id="form" action="">
-        <div class="input_group">
-          <label class="input_title" for="email">
+        <div className="input_group">
+          <label className="input_title" for="email">
             使用者帳號
           </label>
           <input
@@ -12,16 +12,16 @@ const NotFound = () => {
             placeholder="eclairnear345@gmail.com"
           />
         </div>
-        <div class="input_group">
-          <label class="input_title" for="password">
+        <div className="input_group">
+          <label className="input_title" for="password">
             密碼
           </label>
-          <div class="input_group_container">
+          <div className="input_group_container">
             <input id="password" type="password" placeholder="8+ characters" />
           </div>
         </div>
-        <div class="btn_container">
-          <button class="btn">登入</button>
+        <div className="btn_container">
+          <button className="btn">登入</button>
         </div>
       </form>
     </div>

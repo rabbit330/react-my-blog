@@ -21,8 +21,6 @@
   padding: 5px;
 }
 
-
-
 .input_title {
   padding-right: 20px;
 }
@@ -33,6 +31,7 @@
 
 .btn_container {
   position: relative;
+  border: 1px solid black;
 }
 
 .btn {

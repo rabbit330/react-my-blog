@@ -1,7 +1,5 @@
-import Layout from "@/components/Layout";
-
 const AddPost = () => {
-  return <Layout>AddPost</Layout>;
+  return <>AddPost</>;
 };
 
 export default AddPost;
