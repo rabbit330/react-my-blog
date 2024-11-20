@@ -1,0 +1,112 @@
+@import url(/src/assets/css/reset.css);
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.post {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+#main {
+  border: 1px solid #c9cacf;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px 60px;
+  margin-top: 20px;
+}
+
+#post_title {
+  width: 100%;
+  border: 1px solid #c9cacf;
+  outline: none;
+  margin-bottom: 4px;
+}
+
+#post_title::placeholder{
+  font-size: 20px;
+}
+
+#time {
+  width: auto;
+  border: 1px solid #c9cacf;
+  outline: none;
+}
+
+#time::placeholder{
+  font-size: 20px;
+}
+
+.now {
+  border: 1px solid black;
+  margin-left: 5px;
+}
+
+.eddit_form_container {
+  margin: 20px 0;
+}
+
+.group_container .post_title {
+  width: 100%;
+}
+
+.btn_container {
+  margin-bottom: 20px;
+}
+
+.btn_container .eddit_btn{
+  border: 1px solid black;
+  margin-right: 5px;
+}
+
+.tag {
+  width: 100%;
+  border: 1px solid #c9cacf;
+  resize: none;
+  margin-top: 5px;
+}
+
+.eddit_area {
+  margin-bottom: 20px;
+}
+
+.eddit_nav {
+  display: flex;
+}
+
+.write {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #c9cacf;
+  resize: none;
+  margin-top: 5px;
+}
+
+.post_btn {
+  display: flex;
+  justify-content:center;
+}
+
+.postbtn {
+  border: 1px solid #2573DA;
+  background-color: #2573DA;
+  width: 96px;
+  height: 40px;
+  color: white;
+  /*position: absolute;
+  right: 50%;
+  transform: translate(48px);*/
+}
+
+.postbtn:last-child {
+  margin-left: 10px;
+}

@@ -44,7 +44,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="nav_item">
-          <Link to="blogs" className="nav_link">
+          <Link to="all" className="nav_link">
             {t("all")}
           </Link>
         </li>

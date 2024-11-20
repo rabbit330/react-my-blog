@@ -1,28 +1,58 @@
-//import { Link, useNavigate } from "react-router-dom";
-//import { useTranslation } from "react-i18next";
-//import i18n from "@/i18n";
-//import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
+import { useState } from "react";
 
-/*const languageList = {
+const languageList = {
   zh: "zh_TW",
   en: "en_US",
-}; */
+};
 
 // 全局狀態 localStorage
+const postCardData = [
+  {
+    title: "Travel",
+    Image: "https://images.pexels.com/photos/1064136/pexels-photo-1064136.jpeg",
+  },
+  {
+    title: "Eat",
+    Image:
+      "https://images.pexels.com/photos/289586/pexels-photo-289586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    title: "Relax",
+    Image:
+      "https://images.pexels.com/photos/4790579/pexels-photo-4790579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    title: "Spiritual",
+    Image:
+      "https://life-tree.org.tw/wp-content/uploads/2021/12/biblestudy-2.jpg",
+  },
+  {
+    title: "Essay",
+    Image:
+      "https://cdn.ftvnews.com.tw/manasystem/FileData/News/70c6daa0-8474-459c-b3b9-a85f8775c4be.jpg",
+  },
+  {
+    title: "work",
+    Image:
+      "https://cdn.ftvnews.com.tw/manasystem/FileData/News/70c6daa0-8474-459c-b3b9-a85f8775c4be.jpg",
+  },
+];
 
 const Home = () => {
-  //const navigate = useNavigate();
-  //const { t } = useTranslation();
-  //const [language, setLanguage] = useState(languageList.zh);
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+  const [language, setLanguage] = useState(languageList.zh);
 
-  /*
   const changeLanguage = () => {
     const newLanguage =
       language === languageList.zh ? languageList.en : languageList.zh;
     setLanguage(newLanguage);
     i18n.changeLanguage(newLanguage);
   };
-  */
+
   return (
     <>
       <section id="banner">
@@ -42,7 +72,7 @@ const Home = () => {
                 <div className="post-card">
                   <img
                     className="post-image"
-                    src="https://i0.wp.com/huitinchou.tw/wp-content/uploads/2020/09/20200910082303_86.jpg"
+                    src="https://images.pexels.com/photos/1064136/pexels-photo-1064136.jpeg"
                     alt=""
                   />
                   <h1 className="post-link">{t("travel")}</h1>
@@ -62,7 +92,7 @@ const Home = () => {
                 <div className="post-card">
                   <img
                     className="post-image"
-                    src="https://scontent.frmq3-1.fna.fbcdn.net/v/t39.30808-6/209924931_4304154672975922_8583083328128074987_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oGMRl8fLZysQ7kNvgHG8peJ&_nc_zt=23&_nc_ht=scontent.frmq3-1.fna&_nc_gid=AJLklsYxZI3H0HdZbC6f0WB&oh=00_AYBovkIzoZ5UxLJSO8F6g2lzJS-Q4fTK4P4IMEqbTpyn6w&oe=672A5C92"
+                    src="https://images.pexels.com/photos/289586/pexels-photo-289586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     alt=""
                   />
                   <h1 className="post-link">{t("relax")}</h1>
@@ -138,7 +168,7 @@ const Home = () => {
                   <div className="line1">
                     <div className="user">
                       <a href="" className="user_link">
-                        <i class="fa-solid fa-user"></i>
+                        <i className="fa-solid fa-user"></i>
                       </a>
                     </div>
                     <div className="user_imfor">
@@ -191,7 +221,7 @@ const Home = () => {
               <i className="fa-brands fa-instagram"></i> instagram
             </a>
             <a href="#" className="nav_link">
-              <i class="fa-brands fa-x-twitter"></i> twitter
+              <i className="fa-brands fa-x-twitter"></i> twitter
             </a>
             <a href="#" className="nav_link">
               <i className="fa-brands fa-threads"></i> thread

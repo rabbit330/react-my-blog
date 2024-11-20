@@ -1,0 +1,38 @@
+@import url(/src/assets/css/reset.css);
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.aboutme {
+  border: 1px solid black;
+  font-size: 40px;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.row{
+  border: 1px solid orange;
+  display: flex;
+  justify-content: space-around;
+}
+
+.col-4{
+  border: 1px solid green;
+  width: 90%;
+}
+
+.img{
+  height: 100px;
+}
+
+.col-8 {
+  border: 1px solid aqua;
+}
