@@ -1,5 +1,13 @@
 import { createBrowserRouter, Form } from "react-router-dom";
-import { Home, Blogs, AddPost, About, NotFound, AllPosts } from "@/pages";
+import {
+  Home,
+  Blogs,
+  AddPost,
+  About,
+  NotFound,
+  AllPosts,
+  Login,
+} from "@/pages";
 import EditPost from "@/pages/EditPost";
 import Layout from "@/components/Layout";
 
@@ -31,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/edit-post",
         element: <EditPost />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
       {
         path: "*",

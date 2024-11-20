@@ -1,0 +1,47 @@
+@import url(/src/assets/css/reset.css);
+* {
+  box-sizing: border-box;
+}
+
+.login_main {
+  width: 90%;
+  height: 300px;
+}
+
+.box {
+  border: 1px solid black;
+  margin: 0 auto;
+  font-size: 24px;
+  width: 500px;
+}
+
+.box_form {
+  padding: 0 auto;
+  border: 1px solid pink;
+}
+
+.input_group {
+  display: flex;
+  padding: 5px;
+}
+
+.loginemail {
+  margin-left: 72px;
+}
+
+.input_password {
+  padding-right: 20px;
+}
+
+#password {
+  margin-left: 72px;
+}
+
+.login_btn {
+  font-size: 24px;
+  border: 1px solid black;
+  border-radius: 2px;
+  position: absolute;
+  /*left: 40%;*/
+  margin-top: 10px ;
+}

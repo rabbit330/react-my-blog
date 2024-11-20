@@ -5,5 +5,6 @@ import AddPost from "@/pages/AddPost";
 import About from "@/pages/About";
 import EditPost from "@/pages/EditPost";
 import AllPosts from "@/pages/AllPosts";
+import Login from "@/pages/Login";
 
-export { Home, Blogs, AddPost, About, NotFound, EditPost, AllPosts };
+export { Home, Blogs, AddPost, About, NotFound, EditPost, AllPosts, Login };

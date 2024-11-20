@@ -60,9 +60,9 @@ const Header = () => {
         <li href="" className="icon_link">
           <i className="fa-solid fa-moon"></i>
         </li>
-        <li href="" className="icon_link">
+        <Link to="login" className="icon_link">
           <i className="fa-solid fa-arrow-right-to-bracket"></i> {t("login")}
-        </li>
+        </Link>
       </ul>
     </header>
   );
