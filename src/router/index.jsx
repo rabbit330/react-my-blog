@@ -7,6 +7,15 @@ import {
   NotFound,
   AllPosts,
   Login,
+  FranceTravel,
+  TurkyTravel,
+  SunTarotcard,
+  PickACard,
+  MyThought,
+  TakeTheRisk,
+  Chart,
+  ReleaseStress,
+  KyotoTravel,
 } from "@/pages";
 import EditPost from "@/pages/EditPost";
 import Layout from "@/components/Layout";
@@ -39,6 +48,42 @@ const router = createBrowserRouter([
       {
         path: "/edit-post",
         element: <EditPost />,
+      },
+      {
+        path: "/francetravel",
+        element: <FranceTravel />,
+      },
+      {
+        path: "/turkytravel",
+        element: <TurkyTravel />,
+      },
+      {
+        path: "/suntarotcard",
+        element: <SunTarotcard />,
+      },
+      {
+        path: "/pickacard",
+        element: <PickACard />,
+      },
+      {
+        path: "/mythought",
+        element: <MyThought />,
+      },
+      {
+        path: "/taketherisk",
+        element: <TakeTheRisk />,
+      },
+      {
+        path: "/chart",
+        element: <Chart />,
+      },
+      {
+        path: "/releasestress",
+        element: <ReleaseStress />,
+      },
+      {
+        path: "/kyototravel",
+        element: <KyotoTravel />,
       },
       {
         path: "/login",

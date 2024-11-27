@@ -1,75 +1,82 @@
 import "./index.css";
+import { categories } from "@/utils/common";
+import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
+import clsx from "clsx";
 
 const AddPost = () => {
+  const { t } = useTranslation();
+  const [postCategories, setCategories] = useState([]);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const handleCategory = (category) => {
+    if (postCategories.includes(category)) {
+      //移除
+      const newCategory = postCategories.filter((item) => item !== category);
+      setCategories(newCategory);
+    } else {
+      //新增
+      const newCategory = [...postCategories, category];
+      setCategories(newCategory);
+    }
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    const formData = {
+      id: Date.now(),
+      title,
+      category: postCategories,
+      content,
+      createdAt: Math.floor(Date.now() / 1000),
+    };
+    console.log(formData);
+  };
+
   return (
     <>
       <section id="socialmedia"></section>
-      <div className="post">文章編輯</div>
+      <div className="post">新增文章</div>
       <main id="main">
         <div className="eddit_form_container">
-          <form id="eddit_form" action="">
+          <form onSubmit={submit} id="eddit_form" action="">
             <div className="group_container">
-              <input id="post_title" type="text" placeholder="請輸入文章標題" />
+              <input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                id="post_title"
+                type="text"
+                placeholder="請輸入文章標題"
+              />
             </div>
-            <div className="time_group">
-              <div className="group_container">
-                <input id="time" type="datetime" placeholder="2024-11-11" />
-                <button className="now">現在</button>
-              </div>
+            <div className="btn_container">
+              {categories
+                .filter((category) => category !== "all")
+                .map((item) => (
+                  <button
+                    type="button"
+                    onClick={() => handleCategory(item)}
+                    key={item}
+                    className={clsx(
+                      "border-b border-solid border-gray-400 cursor-pointer border px-2  py-1 rounded-[24px] mr-2",
+                      {
+                        "bg-activeBlue font-bold text-white":
+                          postCategories.includes(item),
+                      }
+                    )}
+                  >
+                    {t(item)}
+                  </button>
+                ))}
             </div>
-          </form>
-        </div>
-        <div className="btn_container">
-          <button className="eddit_btn">+常用標籤</button>
-          <button className="eddit_btn">#為地點標籤評分</button>
-          <button className="eddit_btn">+推薦標籤</button>
-          <button className="eddit_btn">@建議文章分類</button>
-          <form id="add_lebal" action="">
             <textarea
-              className="tag"
-              defaultValue={"(已輸入0組，還可輸入20組)"}
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              className="write"
+              placeholder="今天想寫些什麼..."
             ></textarea>
+            <button className="postbtn">發表文章</button>
           </form>
-        </div>
-        <div className="eddit_area">
-          <ul id="eddit_menu" className="eddit_nav">
-            <li className="eddit_item">
-              <i className="fa-solid fa-arrow-rotate-left"></i>
-            </li>
-            <li className="eddit_item">
-              <i className="fa-solid fa-arrow-rotate-right"></i>
-            </li>
-            <li className="eddit_item">
-              <a href="#" className="eddit_link">
-                格式
-              </a>
-            </li>
-            <li className="eddit_item">
-              <a href="#" className="eddit_link">
-                預設字型
-              </a>
-            </li>
-            <li className="eddit_item">
-              <a href="#" className="eddit_link">
-                字型
-              </a>
-            </li>
-            <li className="eddit_item">
-              <i className="fa-solid fa-underline"></i>
-            </li>
-            <li className="eddit_item">
-              <i className="fa-solid fa-highlighter"></i>
-            </li>
-          </ul>
-          <form id="input_eddit" action="" />
-          <textarea
-            className="write"
-            defaultValue={"今天想寫些什麼..."}
-          ></textarea>
-        </div>
-        <div className="post_btn">
-          <button className="postbtn">儲存草稿</button>
-          <button className="postbtn">發表文章</button>
         </div>
       </main>
       <section id="socialmedia">

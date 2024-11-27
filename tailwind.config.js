@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        activeBlue: '#2573DA'
+      },
       boxShadow: {
         primary: "0 0 4px rgba(0,0,0,0.5)"
       }

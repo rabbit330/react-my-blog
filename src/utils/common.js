@@ -1,0 +1,1 @@
+export const categories = ['all', 'travel', 'eat', 'relax', 'spiritual', 'essay', 'work']

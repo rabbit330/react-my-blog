@@ -20,7 +20,7 @@ a {
 }
 
 .all_post .row .col-2 {
-  border: 1px solid yellow;
+  /*border: 1px solid yellow;*/
   width: 16.666666%;
   height:auto;
 }
