@@ -18,21 +18,19 @@ a {
   padding: 10px;
 }
 
-.row{
-  border: 1px solid orange;
+.row {
   display: flex;
   justify-content: space-around;
 }
 
-.col-4{
+.col-4 {
   border: 1px solid green;
   width: 90%;
 }
 
-.img{
+.img {
   height: 100px;
 }
 
 .col-8 {
-  
 }

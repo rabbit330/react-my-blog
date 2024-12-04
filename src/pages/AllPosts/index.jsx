@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { useState, useEffect } from "react";
 import PostCard from "@/components/PostCard";
-import { postApi } from "@/api/post";
 import clsx from "clsx";
 import { categories } from "@/utils/common";
+import { usePostStore } from "@/store/post.js";
 
 const languageList = {
   zh: "zh_TW",
@@ -24,17 +24,11 @@ const languageList = {
 ];*/
 const AllPosts = () => {
   const navigate = useNavigate();
+  const { posts, setPosts } = usePostStore();
   const { t } = useTranslation();
   const [language, setLanguage] = useState(languageList.zh);
-  const [posts, setPosts] = useState([]);
-  const [filterPosts, setFilterPosts] = useState([]);
+  const [filterPosts, setFilterPosts] = useState(posts);
   const [activeCategory, setActiveCategory] = useState(categories[0]);
-
-  const getPosts = async () => {
-    const { data } = await postApi.getPosts();
-    setPosts(data);
-    setFilterPosts(data);
-  };
 
   const changeLanguage = () => {
     const newLanguage =
@@ -53,12 +47,7 @@ const AllPosts = () => {
     }
     const newPosts = posts.filter((item) => item.category.includes(category));
     setFilterPosts(newPosts);
-    console.log(category);
   };
-
-  useEffect(() => {
-    getPosts();
-  }, []);
 
   return (
     <>
@@ -92,11 +81,12 @@ const AllPosts = () => {
                   {filterPosts.map((item) => (
                     <div key={item.id} className="col-4">
                       <PostCard
-                        imge={item.image}
+                        image={item.image}
                         title={item.title}
                         content={item.content}
                         time={item.creactedAt}
                         tags={item.category}
+                        onClick={() => navigate(`/post/${item.id}`)}
                       />
                     </div>
                   ))}

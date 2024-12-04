@@ -14,6 +14,10 @@ a {
   color: #000;
 }
 
+.darkMode{
+  background-color: #000;
+}
+
 .header {
   height: 80px;
   display: flex;
@@ -393,4 +397,8 @@ input[type="checkbox"]:checked + i{
   border: 1px solid #2573DA;
   background-color: #2573DA;
   padding: 16px;
+}
+
+.ql-container {
+  height: 300px;
 }

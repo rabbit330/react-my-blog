@@ -3,12 +3,21 @@ import { categories } from "@/utils/common";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import { usePostStore } from "@/store/post.js";
+import { Link, useNavigate } from "react-router-dom";
+import { message } from "antd";
 
 const AddPost = () => {
   const { t } = useTranslation();
   const [postCategories, setCategories] = useState([]);
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+
+  const { posts, setPosts } = usePostStore();
+
   const handleCategory = (category) => {
     if (postCategories.includes(category)) {
       //移除
@@ -29,8 +38,17 @@ const AddPost = () => {
       category: postCategories,
       content,
       createdAt: Math.floor(Date.now() / 1000),
+      comment: [],
+      likeAmount: 0,
     };
+    setPosts([...posts, formData]);
+    navigate("/all");
+    message.success("已新增文章");
     console.log(formData);
+  };
+  const handleContentChange = (value) => {
+    console.log("value", value);
+    setContent(value);
   };
 
   return (
@@ -69,12 +87,15 @@ const AddPost = () => {
                   </button>
                 ))}
             </div>
-            <textarea
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              className="write"
-              placeholder="今天想寫些什麼..."
-            ></textarea>
+            <div className="">
+              <ReactQuill
+                className=" h-full"
+                theme="snow"
+                value={content}
+                onChange={handleContentChange}
+                placeholder="今天想寫些什麼..."
+              />
+            </div>
             <button className="postbtn">發表文章</button>
           </form>
         </div>

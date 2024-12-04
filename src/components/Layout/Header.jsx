@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 // import { useState } from "react";
 import { useUserStore } from "@/store/user";
+import { message } from "antd";
 
 const languageList = {
   zh: "zh_TW",
@@ -10,11 +11,17 @@ const languageList = {
 };
 
 const Header = () => {
-  const { language, setLanguage } = useUserStore();
+  const { language, setLanguage, darkMode, setDarkMode } = useUserStore();
   console.log(language);
   const navigate = useNavigate();
   const { t } = useTranslation();
   //const [language, setLanguage] = useState(languageList.zh);
+
+  const toggleDarkMode = () => {
+    const text = !darkMode ? "暗黑" : "明亮";
+    message.success(`${text}模式`);
+    setDarkMode(!darkMode);
+  };
 
   //翻譯
 
@@ -57,8 +64,12 @@ const Header = () => {
         <li onClick={changeLanguage} className="icon_link cursor-pointer">
           <i className="fa-solid fa-earth-asia"></i> EN
         </li>
-        <li href="" className="icon_link">
-          <i className="fa-solid fa-moon"></i>
+        <li
+          href=""
+          className="icon_link cursor-pointer"
+          onClick={toggleDarkMode}
+        >
+          <i className={`${darkMode ? "fa-solid" : "fa-regular"} fa-moon`}></i>
         </li>
         <Link to="login" className="icon_link">
           <i className="fa-solid fa-arrow-right-to-bracket"></i> {t("login")}
