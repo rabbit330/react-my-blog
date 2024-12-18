@@ -1,9 +1,10 @@
 {
   "login": "Login",
+  "logout":"Logout",
   "home": "Home",
   "about": "About",
   "all": "All",
-  "eddit": "Eddit",
+  "addit": "addit",
   "travel": "Travel",
   "eat": "Eat",
   "relax": "Relax",
@@ -14,5 +15,6 @@
   "read_more": "Read More",
   "join": "Join My Mailing",
   "agree": "Yes,subscribe me to your newsletter",
-  "subscribe": "Subscribe Now"
+  "subscribe": "Subscribe Now",
+  "write a comment...":"Write a comment..."
 }

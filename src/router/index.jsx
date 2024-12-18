@@ -7,15 +7,7 @@ import {
   NotFound,
   AllPosts,
   Login,
-  Post1,
-  Post2,
-  Post3,
-  Post4,
-  Post5,
-  Post6,
-  Post7,
-  Post8,
-  Post9,
+  Post,
 } from "@/pages";
 import EditPost from "@/pages/EditPost";
 import Layout from "@/components/Layout";
@@ -46,44 +38,12 @@ const router = createBrowserRouter([
         element: <AllPosts />,
       },
       {
-        path: "/edit-post",
+        path: "/edit-post/:id",
         element: <EditPost />,
       },
       {
         path: "/post/:id",
-        element: <Post1 />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post2 />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post3 />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post4 />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post5 />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post6 />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post7 />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post8 />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post9 />,
+        element: <Post />,
       },
       {
         path: "/login",

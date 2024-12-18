@@ -4,16 +4,39 @@ import { usePostStore } from "@/store/post.js";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { formatDate } from "@/utils/common.js";
+import PostComment from "@/components/PostComment";
+import WrightComment from "@/components/WrightComment";
 import parse from "html-react-parser";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { message } from "antd";
+import axios from "axios";
 
-const Post1 = () => {
+const getComments = async () => {
+  const data = await axios.get("/mock/posts");
+  console.log(data);
+};
+
+{
+  /*const postData = [
+  { id: 1, visitor: "Amy", content: "好讚", createdAt: 11732616085 },
+  {
+    id: 2,
+    visitor: "connie",
+    content: "看起來真的好棒",
+    createdAt: 11732616085,
+  },
+];*/
+}
+
+const Post = () => {
   const { posts, setPosts } = usePostStore();
   const { id } = useParams();
   const { t } = useTranslation();
   const post = posts.find((item) => item.id === Number(id));
+  const navigate = useNavigate();
+
+  useEffect(() => {}, []);
 
   return (
     <>
@@ -21,13 +44,18 @@ const Post1 = () => {
       <main id="all_main">
         <div className="row">
           <div className="col-8">
-            <div className="container">
+            <div className="container relative">
+              <button
+                onClick={() => navigate(`/edit-post/${id}`)}
+                className="absolute top-4 right-4"
+              >
+                <i class="fa-solid fa-pen"></i>
+              </button>
               <div className="edditor_imfor">
                 <div className="name">味噌湯裡的通心粉</div>
                 <span className="time">{formatDate(post.createdAt)}</span>
                 <span className="time">· 2 min</span>
                 <h1>{post.title}</h1>
-                <h3>恬靜湖畔的沉浸式度假體驗</h3>
                 <img className="photo" src={post.image} alt="" />
                 <div experience_container>{parse(post.content)}</div>
                 <div className="share_icon">
@@ -71,66 +99,10 @@ const Post1 = () => {
               </div>
             </div>
             <div className="comments">
-              <div className="viewer1_comment_container border-b border-solid border-gray-400 cursor-pointer border rounded-[5px] py-5 px-14 mb-5 mt-5">
-                <div className="viewer_line1 flex ">
-                  <div className="viewer">
-                    <a href="" class="user_link">
-                      <i class="fa-solid fa-user"></i>
-                    </a>
-                  </div>
-                  <div className="viewer_imfor">
-                    <div className="viewer_name">Connie</div>
-                    <span className="viewer_time">Sep 1,2024</span>
-                    <span className="viewer_time">· 2 min</span>
-                  </div>
-                </div>
-                <div className="viewer_comments">
-                  <p class="coment_text">太酷辣。</p>
-                </div>
-                <hr />
-              </div>
-              <div className="viewer1_comment_container border-b border-solid border-gray-400 cursor-pointer border rounded-[5px] py-5 px-14 mb-5">
-                <div className="viewer_line1 flex ">
-                  <div className="viewer">
-                    <a href="" class="user_link">
-                      <i class="fa-solid fa-user"></i>
-                    </a>
-                  </div>
-                  <div className="viewer_imfor">
-                    <div className="viewer_name">David</div>
-                    <span className="viewer_time">Sep 23,2024</span>
-                    <span className="viewer_time">· 2 min</span>
-                  </div>
-                </div>
-                <div className="viewer_comments">
-                  <p class="coment_text">土耳其好棒。</p>
-                </div>
-                <hr />
-              </div>
-              <div className="comment_container">
-                <div className="eddit">Comments</div>
-                <div className="eddit_below">
-                  Write a comment...
-                  <div className="tool_container">
-                    <a href="" className="tool_link">
-                      <i className="fa-solid fa-face-smile"></i>
-                    </a>
-                    <a href="" className="tool_link">
-                      <i className="fa-solid fa-camera"></i>
-                    </a>
-                    <a href="" className="tool_link">
-                      <i className="fa-solid fa-video"></i>
-                    </a>
-                  </div>
-                </div>
-                <div className="cancel_container">
-                  <p className="member">Log in to publish as a member</p>
-                  <div>
-                    <button className="cancel">Cancel</button>
-                    <button className="publish">Publish</button>
-                  </div>
-                </div>
-              </div>
+              {posts.map((item) => (
+                <PostComment key={item} />
+              ))}
+              <WrightComment />
             </div>
           </div>
         </div>
@@ -139,4 +111,4 @@ const Post1 = () => {
   );
 };
 
-export default Post1;
+export default Post;

@@ -5,17 +5,11 @@
     "title":"探索土耳其：品味地道的沙威瑪",
     "content":"土耳其是個充滿異域風情的國家，不僅擁有壯麗的自然景觀與豐富的歷史遺跡，其美食更是聞名世界。這次土耳其之旅，我有幸親身體驗當地的飲食文化，其中最令我念念不忘的，便是品嘗土耳其沙威瑪（Shawarma）的經歷。",
     "createdAt":1732263433,
-    "category":["美食"],
+    "category":["eat"],
     "likeAmount": 20,
     "comment": [
-      {"id":1,
-    "content":"好讚",
-    "createdAt":11732616085
-      },
-      {"id":2,
-    "content":"看起來真的好棒",
-    "createdAt":11732616085
-      }
+      {"id":1,"visitor":"","content":"好讚","createdAt":11732616085},
+      {"id":2,"visitor":"connie","content":"看起來真的好棒","createdAt":11732616085}
     ]
   },
   {
@@ -27,11 +21,11 @@
     "category":["eat", "travel"],
     "likeAmount":20,
     "comment": [
-      {"id":1,
+      {"id":1,"visitor":"visitor",
     "content":"法國巴黎就是讚",
     "createdAt":11732616085
       },
-      {"id":2,
+      {"id":2,"visitor":"visitor",
     "content":"我也好想去巴黎看看",
     "createdAt":11732616085
       }
@@ -45,12 +39,12 @@
     "createdAt":1732263433,
     "category":["spiritual"],
     "likeAmount": 20,
-    "comment": [
-      {"id":1,
+    "viewer_comment": [
+      {"id":1,"visitor":"visitor",
     "content":"我比較喜歡戀人牌",
     "createdAt":11732616085
       },
-      {"id":2,
+      {"id":2,"visitor":"visitor",
     "content":"最害怕塔羅牌中的高塔...",
     "createdAt":11732616085
       }
@@ -64,12 +58,12 @@
     "createdAt":1732263433,
     "category":["spiritual"],
     "likeAmount":20,
-    "comment": [
-      {"id":1,
+    "viewer_comment": [
+      {"id":1,"visitor":"visitor",
     "content":"學塔羅牌容易嗎?",
     "createdAt":11732616085
       },
-      {"id":2,
+      {"id":2,"visitor":"visitor",
     "content":"塔羅牌我覺得很可怕...",
     "createdAt":11732616085
       }
@@ -83,12 +77,12 @@
     "createdAt":1732263433,
     "category":["essay"],
     "likeAmount":20,
-    "comment": [
-      {"id":1,
+    "viewer_comment": [
+      {"id":1,"visitor":"visitor",
     "content":"法國巴黎就是讚",
     "createdAt":11732616085
       },
-      {"id":2,
+      {"id":2,"visitor":"visitor",
     "content":"我也好想去巴黎看看",
     "createdAt":11732616085
       }
@@ -102,12 +96,12 @@
     "createdAt":1732263433,
     "category":["essay"],
     "likeAmount":20,
-    "comment": [
-      {"id":1,
+    "viewer_comment": [
+      {"id":1,"visitor":"visitor",
     "content":"法國巴黎就是讚",
     "createdAt":11732616085
       },
-      {"id":2,
+      {"id":2,"visitor":"visitor",
     "content":"我也好想去巴黎看看",
     "createdAt":11732616085
       }
@@ -121,12 +115,12 @@
     "createdAt":1732263433,
     "category":["work"],
     "likeAmount":20,
-    "comment": [
-      {"id":1,
+    "viewer_comment": [
+      {"id":1,"visitor":"visitor",
     "content":"法國巴黎就是讚",
     "createdAt":11732616085
       },
-      {"id":2,
+      {"id":2,"visitor":"visitor",
     "content":"我也好想去巴黎看看",
     "createdAt":11732616085
       }
@@ -140,12 +134,12 @@
     "createdAt":1732263433,
     "category":["relax"],
     "likeAmount":20,
-    "comment": [
-      {"id":1,
+    "viewer_comment": [
+      {"id":1,"visitor":"visitor",
     "content":"法國巴黎就是讚",
     "createdAt":11732616085
       },
-      {"id":2,
+      {"id":2,"visitor":"visitor",
     "content":"我也好想去巴黎看看",
     "createdAt":11732616085
       }
@@ -159,12 +153,12 @@
     "createdAt":1732263433,
     "category":["travel"],
     "likeAmount": 20,
-    "comment": [
-      {"id":1,
+    "viewer_comment": [
+      {"id":1,"visitor":"visitor",
     "content":"日本櫻花真的很美麗~",
     "createdAt":11732616085
       },
-      {"id":2,
+      {"id":2,"visitor":"visitor",
     "content":"版主是去櫻花盛開的時候去的嗎?",
     "createdAt":11732616085
       }

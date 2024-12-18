@@ -6,6 +6,8 @@ export const usePostStore = create(
     (set) => ({
       posts:[],
       setPosts: (posts) => set({ posts },),
+      comments:[],
+      setComments:(comments) => set({ comments }),
     }),
     {
       name: 'post'

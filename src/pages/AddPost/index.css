@@ -1,5 +1,3 @@
-@import url(/src/assets/css/reset.css);
-
 * {
   box-sizing: border-box;
 }
@@ -32,7 +30,7 @@ a {
   margin-bottom: 4px;
 }
 
-#post_title::placeholder{
+#post_title::placeholder {
   font-size: 20px;
 }
 
@@ -42,7 +40,7 @@ a {
   outline: none;
 }
 
-#time::placeholder{
+#time::placeholder {
   font-size: 20px;
 }
 
@@ -63,7 +61,7 @@ a {
   margin-bottom: 20px;
 }
 
-.btn_container .eddit_btn{
+.btn_container .eddit_btn {
   border: 1px solid black;
   margin-right: 5px;
 }
@@ -93,12 +91,12 @@ a {
 
 .post_btn {
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
 .postbtn {
-  border: 1px solid #2573DA;
-  background-color: #2573DA;
+  border: 1px solid #2573da;
+  background-color: #2573da;
   width: 96px;
   height: 40px;
   color: white;
