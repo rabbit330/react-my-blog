@@ -7,15 +7,12 @@
   margin-top: 40px;
 }
 
-.container {
-  /*box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);*/
+/*.container {
   border: 1px solid #c9c9c9;
   width: 940px;
-  /*height: 832px;*/
-  /*margin: 0 auto;*/
   border-radius: 4px;
   overflow: hidden;
-}
+}*/
 
 .container .edditor_imfor {
   font-size: 20px;

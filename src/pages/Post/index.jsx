@@ -17,18 +17,6 @@ const getComments = async () => {
   console.log(data);
 };
 
-{
-  /*const postData = [
-  { id: 1, visitor: "Amy", content: "好讚", createdAt: 11732616085 },
-  {
-    id: 2,
-    visitor: "connie",
-    content: "看起來真的好棒",
-    createdAt: 11732616085,
-  },
-];*/
-}
-
 const Post = () => {
   const { posts, setPosts } = usePostStore();
   const { id } = useParams();
@@ -44,7 +32,7 @@ const Post = () => {
       <main id="all_main">
         <div className="row">
           <div className="col-8">
-            <div className="container relative">
+            <div className="container w-[940px] relative border border-solid rounded overflow-hidden	border-[#c9c9c9]">
               <button
                 onClick={() => navigate(`/edit-post/${id}`)}
                 className="absolute top-4 right-4"
@@ -99,8 +87,13 @@ const Post = () => {
               </div>
             </div>
             <div className="comments">
-              {posts.map((item) => (
-                <PostComment key={item} />
+              {post.comment.map((item) => (
+                <PostComment
+                  key={item.id}
+                  visitor={item.visitor}
+                  comment={item.content}
+                  createdAt={item.createdAt}
+                />
               ))}
               <WrightComment />
             </div>

@@ -17,12 +17,11 @@ a {
 }
 
 .row {
-  display: flex;
-  justify-content: space-around;
+  /*display: flex;*/
+  /*justify-content: space-around;*/
 }
 
 .col-4 {
-  border: 1px solid green;
   width: 90%;
 }
 

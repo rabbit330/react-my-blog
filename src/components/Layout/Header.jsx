@@ -41,25 +41,25 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
+    <header className="header h-20 flex justify-around items-center bg-white">
       <img
-        className="blog_name"
+        className="blog_name h-10"
         src="https://live.staticflickr.com/65535/54108673211_019dbdaaee.jpg"
         alt=""
       />
-      <ul id="menu" className="nav">
-        <li className="nav_item">
-          <Link to="/" className="nav_link">
+      <ul id="menu" className="nav flex text-black">
+        <li className="nav_item mr-7">
+          <Link to="/" className="nav_link hover:text-mainBlue">
             {t("home")}
           </Link>
         </li>
-        <li className="nav_item">
-          <Link to="about" className="nav_link">
+        <li className="nav_item mr-7">
+          <Link to="about" className="nav_link hover:text-mainBlue">
             {t("about")}
           </Link>
         </li>
-        <li className="nav_item">
-          <Link to="all" className="nav_link">
+        <li className="nav_item ">
+          <Link to="all" className="nav_link hover:text-mainBlue">
             {t("all")}
           </Link>
         </li>
@@ -67,16 +67,19 @@ const Header = () => {
       <div className="flex">
         {token && <p className="mr-2">Hi, {username}</p>}
         <ul className="icon__container flex">
-          <Link to="add-post" className="icon_link">
+          <Link to="add-post" className="icon_link mr-2 hover:text-mainBlue">
             <i className="fa-solid fa-pen"></i>
-            {t("eddit")}
+            {t("addit")}
           </Link>
-          <li onClick={changeLanguage} className="icon_link cursor-pointer">
+          <li
+            onClick={changeLanguage}
+            className="icon_link cursor-pointer mr-2 hover:text-mainBlue"
+          >
             <i className="fa-solid fa-earth-asia"></i> EN
           </li>
           <li
             href=""
-            className="icon_link cursor-pointer"
+            className="icon_link cursor-pointer mr-2 hover:text-mainBlue"
             onClick={toggleDarkMode}
           >
             <i
@@ -86,8 +89,8 @@ const Header = () => {
           {token ? (
             <button onClick={logout}>登出</button>
           ) : (
-            <Link to="login" className="icon_link">
-              <i className="fa-solid fa-arrow-right-to-bracket"></i>{" "}
+            <Link to="login" className="icon_link hover:text-mainBlue">
+              <i className="fa-solid fa-arrow-right-to-bracket "></i>{" "}
               {t("login")}
             </Link>
           )}

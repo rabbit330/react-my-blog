@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom";
 import "./index.css";
+import { formatDate } from "@/utils/common.js";
 import { usePostStore } from "@/store/post.js";
 
-const PostComment = ({ visitor, createdAt, content }) => {
+const PostComment = ({ visitor, createdAt, comment }) => {
   return (
     <div className="comments">
       <div className="viewer1_comment_container border-b border-solid border-gray-400 cursor-pointer border rounded-[5px] py-5 px-14 mb-5 mt-5">
         <div className="viewer_line1 flex ">
-          <div className="viewer">
-            <a href="" class="user_link">
+          <div className="viewer relative top-1">
+            <a href="" class="user_link ">
               <i class="fa-solid fa-user"></i>
             </a>
           </div>
-          <div className="viewer_imfor">
+          <div className="viewer_imfor ml-2">
             <div className="viewer_name">{visitor}</div>
-            <span className="viewer_time">{createdAt}</span>
+            <span className="viewer_time text-[12px]">
+              {formatDate(createdAt)}
+            </span>
           </div>
         </div>
         <div className="viewer_comments">
-          <p className="coment_text">{content}</p>
+          <p className="coment_text">{comment}</p>
         </div>
         <hr />
       </div>

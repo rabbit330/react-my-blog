@@ -55,24 +55,27 @@ const Home = () => {
 
   return (
     <>
-      <section id="banner">
-        <div className="banner_container">
-          <p className="banner_stittle">Travel Blog</p>
-          <h1 className="banner_tittle">Going Places</h1>
+      <section
+        id="banner"
+        className="bg-[url('https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] h-[476px] bg-center bg-no-repeat bg-cover pt-[160px] text-mainGray"
+      >
+        <div className="banner_container py-[20px] bg-white/50 border border-solid border-white w-auto	my-0 mx-auto text-center	">
+          <p className="banner_stittle text-[18px]">Travel Blog</p>
+          <h1 className="banner_tittle text-[70px] mb-4">Going Places</h1>
           <p className="banner_para">
             I haven’t been everywhere, but it’s on my list
           </p>
         </div>
       </section>
-      <section id="paragraph">
+      <section id="paragraph" className="w-4/5 m my-0 mx-auto">
         <div className="paragraph_container">
           <div className="post-container">
-            <div className="row">
+            <div className="row flex justify-around">
               <div className="col-4">
                 <div className="post-card">
                   <img
                     className="post-image"
-                    src="https://images.pexels.com/photos/1064136/pexels-photo-1064136.jpeg"
+                    src="https://live.staticflickr.com/65535/54228143316_5aec41f800.jpg"
                     alt=""
                   />
                   <h1 className="post-link">{t("travel")}</h1>
@@ -132,11 +135,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="gray"></section>
+      <section id="gray" className="h-[80px] bg-[#C9C9C9] mb-12"></section>
       <main id="main">
         <div className="main-container">
           <div className="row">
-            <div className="col-2">
+            <div className="col-2 w-1/6">
               <div className="aside border border-solid border-gray-400 shadow-primary w-40 h-[280px]">
                 <a>{t("catalog")}</a>
                 <ul>
@@ -161,13 +164,16 @@ const Home = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-10">
-              <div className="container">
-                <div className="picture"></div>
-                <div className="coment_container">
-                  <div className="line1">
-                    <div className="user">
-                      <a href="" className="user_link">
+            <div className="col-10 w-5/6 ">
+              <div className="container h-auto w-4/5 border rounded overflow-hidden shadow-[0px 0px 4px_rgba(0,0,0,0.5)]">
+                <div className="picture w-[940px] h-[528px] bg-[url('https://images.pexels.com/photos/128303/pexels-photo-128303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-center bg-no-repeat bg-cover my-0 mx-auto"></div>
+                <div className="coment_container h-[280px] w-[940px] my-0 mx-auto">
+                  <div className="line1 w-[858px] h-[34px] flex mb-5">
+                    <div className="user border border-solid border-mainGray w-8 h-8 rounded-[50%] relative">
+                      <a
+                        href=""
+                        className="user_link block absolute top-[50%] left-[50%]"
+                      >
                         <i className="fa-solid fa-user"></i>
                       </a>
                     </div>

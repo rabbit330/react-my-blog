@@ -19,72 +19,72 @@ a {
 }
 
 .header {
-  height: 80px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #fff;
+  /*height: 80px;*/
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*align-items: center;*/
+  /*background-color: #fff;*/
 }
 
 .header .blog_name {
-  height: 40px;
+  /*height: 40px;*/
 }
 
 .header .nav {
-  display: flex;
-  color: #000;
+  /*display: flex;*/
+  /*color: #000;*/
 }
 
 .header .icon_link {
-  margin-right: 8px;
+  /*margin-right: 8px;*/
 }
 .icon_link:last-child {
-  margin-right: 0;
+  /*margin-right: 0;*/
 }
 
 .header .nav_item {
-  margin-right: 28px;
+  /*margin-right: 28px;*/
 }
 
 .header .nav_item:last-child {
-  margin-right: 0px;
+  /*margin-right: 0px;*/
 }
 
 .header .nav .nav_link:hover {
-  color: #194D91;
+  /*color: #194D91;*/
 }
 
 #banner {
+  /*background-image: url('https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   height: 476px;
-  background-image: url('https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-position: center;
   background-repeat: none;
   background-size: cover;
   padding-top: 160px;
-  color: gray;
+  color: gray;*/
 }
 
 #banner .banner_container {
-  padding: 20px 0;
+  /*padding: 20px 0;
   background-color: rgba(255, 255, 255, .5);
   border: 1px solid #fff;
   width: auto;
   margin: 0 auto;
-  text-align: center;
+  text-align: center;*/
 }
 
 #banner .banner_stittle {
-  font-size: 18px;
+  /*font-size: 18px;*/
 }
 
 #banner .banner_tittle {
-  font-size: 70px;
-  margin-bottom: 16px;
+  /*font-size: 70px;
+  margin-bottom: 16px;*/
 }
 
 #paragraph {
-  width: 80%;
-  margin: 0 auto;
+  /*width: 80%;
+  margin: 0 auto;*/
 }
 
 
@@ -141,13 +141,12 @@ a {
 
 
 .col-10 {
-  width: 83.3333333%;
-  display: flex;
+  /*width: 83.3333333%;
+  display: flex;*/
 }
 
 .col-2 {
-  width: 16.666666666%;
-}
+  /*width: 16.666666666%*/}
 
 .aside {
   /*border: 1px solid gray;
@@ -162,58 +161,57 @@ a {
 }
 
 #gray {
-  height: 80px;
+  /*height: 80px;
   background-color: #C9C9C9;
-  margin-bottom: 60px;
+  margin-bottom: 60px;*/
 }
 
 .container {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   height: auto;
-  /*margin: 0 auto;*/
   border-radius: 4px;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 
 .picture {
-  width: 940px;
+ /*width: 940px;
   height: 528px;
   background-image: url('https://images.pexels.com/photos/128303/pexels-photo-128303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 auto;
+  margin: 0 auto;*/
 }
 
 .coment_container {
-  height: 280px;
+  /*height: 280px;
   width: 940px;
-  margin: 0 auto;
+  margin: 0 auto;*/
 }
 
 .line1 {
-  width: 858px;
+  /*width: 858px;
   height: 34px;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 20px;*/
 }
 
 .user {
-  border: 1px solid gray;
+  /*border: 1px solid gray;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  position: relative;
+  position: relative;*/
 }
 
 .user .user_link i{
-  display: block;
+  /*display: block;
   position:absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   font-size: 20px;
-  color: gray;
+  color: gray;*/
 }
 
 
@@ -286,67 +284,67 @@ a {
 }
 
 #myself {
-  background-color: gray;
-  height: 300px;
-  align-items: center;
+  /*background-color: gray;*/
+  /*height: 300px;*/
+  /*align-items: center;*/
 }
 
 .foot_container {
-  padding: 40px 0;
-  width: 60%;
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
+  /*padding: 40px 0;*/
+  /*width: 60%;*/
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*margin: 0 auto;*/
 }
 
 .foot_container img {
-  width: 140px;
-  height: 140px;
+  /*width: 140px;
+  height: 140px;*/
 }
 
 .about_me {
-  color: white;
+  /*color: white;*/
 }
 
 .about_me h1{
-  font-size: 24px;
-  padding-bottom: 24px;
+  /*font-size: 24px;
+  padding-bottom: 24px;*/
 }
 
 .about_me .para{
-  font-size: 15px;
-  padding-bottom: 15px;
+  /*font-size: 15px;
+  padding-bottom: 15px;*/
 }
 
 
 #form .input_group{
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: left;*/
 }
 
 #form .input_group h1{
-  font-size: 24px;
+  /*font-size: 24px;
   color: white;
-  padding-bottom: 24px;
+  padding-bottom: 24px;*/
 }
 
 
 #form .checkbox_container{
-  padding: 10px 0;
-  display: flex;
+  /*padding: 10px 0;
+  display: flex;*/
 }
 
 .input_group .input_title {
-  font-size: 15px;
+  /*font-size: 15px;
   color: white;
-  margin-bottom: 8px;
+  margin-bottom: 8px;*/
 }
 
 #form .input_group:last-child {
-  flex-direction: row;
+  /*flex-direction: row;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 12px;*/
 }
 
 input[type="email"]{
@@ -362,41 +360,41 @@ input[type="email"]:focus {
 }
 
 ::placeholder {
-  color: #c9cacf;
-  font-size: 12px;
+  /*color: #c9cacf;
+  font-size: 12px;*/
 }
 
 .input_check {
-  width: 16px;
+  /*width: 16px;
   height: 16px;
   border: 1px solid white;
   position: relative;
-  margin-right: 12px;
+  margin-right: 12px;*/
 }
 
 .input_check i{
-  position: absolute;
+  /*position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   display: none;
-  color: white;
+  color: white;*/
 }
 
-input[type="checkbox"] {
+/*input[type="checkbox"] {
   transform: scale(0);
   position: absolute;
-}
+}*/
 
-input[type="checkbox"]:checked + i{
+/*input[type="checkbox"]:checked + i{
   display: inline;
-}
+}*/
 
 .btn {
-  width: 284px;
+  /*width: 284px;
   border: 1px solid #2573DA;
   background-color: #2573DA;
-  padding: 16px;
+  padding: 16px;*/
 }
 
 .ql-container {
